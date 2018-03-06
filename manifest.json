@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "Anna Assistant",
+  "short_name": "Anna",
+  "version": "1.4",
+  "description": "Your Personal Assistant on Google Chrome.",
+  "icons": {
+    "16":"img/icon16.png",
+    "48":"img/icon48.png",
+    "128":"img/icon.png"
+  },
+  "applications": {
+  "gecko": {
+    "id": "savannahar68@gmail.com"
+    }
+  },
+  "background" : {
+    "scripts" : ["js/jquery.min.js","js/on-off-switch.js","js/on-off-switch-onload.js","background.js"]
+  },
+   "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_title" : "Anna",
+    "default_popup" : "popup.html"
+  },
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+  "permissions": [
+    "webNavigation", "*://*/*",
+    "<all_urls>",
+    "activeTab",
+    "bookmarks",
+    "identity",
+    "tabs",
+    "storage",
+    "https://ajax.googleapis.com/",
+    "http://clients1.google.com/complete/search"
+  ],
+  "web_accessible_resources": [
+    "img/*"
+  ]
+}
